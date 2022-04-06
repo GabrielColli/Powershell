@@ -1,0 +1,5 @@
+#creates bearer token
+$currentAzureContext = Get-AzContext
+$azureRmProfile = [Microsoft.Azure.Commands.Common.Authentication.Abstractions.AzureRmProfileProvider]::Instance.Profile;
+$profileClient = New-Object Microsoft.Azure.Commands.ResourceManager.Common.RMProfileClient($azureRmProfile);
+$token = $profileClient.AcquireAccessToken($currentAzureContext.Subscription.TenantId).AccessToken;
