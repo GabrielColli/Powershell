@@ -1,4 +1,5 @@
 ﻿#creates bearer token
+ #you need a fresh login!!!! for the token to be fresh and work!!
 $currentAzureContext = Get-AzContext
 $azureRmProfile = [Microsoft.Azure.Commands.Common.Authentication.Abstractions.AzureRmProfileProvider]::Instance.Profile;
 $profileClient = New-Object Microsoft.Azure.Commands.ResourceManager.Common.RMProfileClient($azureRmProfile);
